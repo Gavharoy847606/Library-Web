@@ -1,128 +1,204 @@
+/* =================== BODY =================== */
 body {
-    font-family: Arial, sans-serif;
-    background: #f9f4ef;
-    margin: 0;
-    padding: 0;
-    color: #333;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: #f0f3f7;
+margin: 0;
+padding: 0;
+color: #333;
 }
 
-/* NAVBAR */
+/* =================== NAVBAR =================== */
 .navbar {
-    padding: 15px 40px;
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eee;
+padding: 15px 50px;
+background: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+position: sticky;
+top: 0;
+z-index: 100;
 }
 .navbar .logo {
-    font-size: 22px;
-    font-weight: bold;
+font-size: 26px;
+font-weight: bold;
+color: #ff7b00;
 }
 .navbar nav {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+display: flex;
+align-items: center;
+gap: 20px;
 }
 .navbar input {
-    padding: 7px 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+padding: 8px 12px;
+border-radius: 8px;
+border: 1px solid #ccc;
+transition: all 0.3s;
+}
+.navbar input:focus {
+border-color: #ff7b00;
+box-shadow: 0 0 12px rgba(255,123,0,0.4);
 }
 
-/* HERO */
+/* =================== HERO =================== */
 .hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: #fdecdc;
+text-align: center;
+padding: 60px 20px;
+background: linear-gradient(135deg, #6a85b6, #bac8e0);
+color: white;
+}
+.hero h1 {
+font-size: 42px;
+margin-bottom: 20px;
 }
 .hero-books img {
-    width: 140px;
-    height: 200px;
-    margin: 10px;
-    border-radius: 10px;
+width: 140px;
+height: 200px;
+margin: 12px;
+border-radius: 15px;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.hero-books img:hover {
+transform: scale(1.1);
+box-shadow: 0 12px 24px rgba(0,0,0,0.25);
 }
 
-/* SECTIONS */
+/* =================== SECTIONS =================== */
 .section {
-    padding: 40px;
+padding: 50px 40px;
+background: #fff;
+margin-bottom: 30px;
+border-radius: 15px;
+box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 25px;
 }
+
 .book-row {
-    display: flex;
-    gap: 30px;
-    margin-top: 20px;
+display: flex;
+gap: 30px;
+flex-wrap: wrap;
+}
+.book-card {
+text-align: center;
+transition: transform 0.3s, box-shadow 0.3s;
 }
 .book-card img {
-    width: 120px;
-    height: 160px;
-    border-radius: 10px;
+width: 130px;
+height: 180px;
+border-radius: 12px;
+}
+.book-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 20px rgba(0,0,0,0.15);
 }
 .book-card p {
-    text-align: center;
+margin-top: 10px;
+font-weight: 500;
 }
 
-/* QUOTE */
-.quote {
-    padding: 40px;
-    background: #222;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-}
-
-/* FLASH SALE */
+/* =================== FLASH SALE =================== */
 .flash-sale {
-    padding: 40px;
-    background: #fff6e6;
+padding: 50px 40px;
+background: #fff6e6;
+border-radius: 15px;
+text-align: center;
 }
 .timer {
-    font-size: 26px;
-    margin-bottom: 20px;
+font-size: 28px;
+font-weight: bold;
+margin-bottom: 25px;
+color: #ff7b00;
 }
 .flash-items {
-    display: flex;
-    gap: 20px;
+display: flex;
+gap: 25px;
+justify-content: center;
+flex-wrap: wrap;
+}
+.flash-card {
+transition: transform 0.3s, box-shadow 0.3s;
 }
 .flash-card img {
-    width: 150px;
-    height: 200px;
-    border-radius: 10px;
+width: 150px;
+height: 200px;
+border-radius: 12px;
+}
+.flash-card:hover {
+transform: translateY(-8px) scale(1.05);
+box-shadow: 0 14px 28px rgba(0,0,0,0.25);
 }
 
-/* AUTHORS */
+/* =================== BUTTONS =================== */
+button {
+padding: 10px 20px;
+border: none;
+border-radius: 10px;
+background: linear-gradient(90deg, #ff7b00, #ffb347);
+color: white;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s;
+}
+button:hover {
+transform: scale(1.1);
+box-shadow: 0 8px 20px rgba(255,123,0,0.4);
+}
+
+/* =================== AUTHORS =================== */
 .authors {
-    display: flex;
-    gap: 20px;
+display: flex;
+gap: 20px;
+justify-content: center;
+flex-wrap: wrap;
 }
 .author {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+width: 80px;
+height: 80px;
+border-radius: 50%;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.author:hover {
+transform: scale(1.1);
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* FOOTER */
+/* =================== QUOTE =================== */
+.quote {
+padding: 50px;
+background: #222;
+color: white;
+text-align: center;
+font-size: 22px;
+border-radius: 15px;
+}
+
+/* =================== FOOTER =================== */
 .footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+background: #222;
+color: white;
+text-align: center;
+padding: 60px 20px;
 }
 .footer input {
-    padding: 10px;
-    width: 250px;
-    border-radius: 5px;
-    border: none;
+padding: 12px;
+width: 280px;
+border-radius: 8px;
+border: none;
+margin-right: 10px;
 }
 .footer button {
-    padding: 10px 15px;
-    margin-left: 5px;
-    border: none;
-    background: #f4c266;
-    font-weight: bold;
-    cursor: pointer;
+padding: 12px 20px;
+border-radius: 10px;
+background: linear-gradient(90deg, #ff7b00, #ffb347);
+color: white;
+font-weight: bold;
+}
+.footer button:hover {
+transform: scale(1.1);
+box-shadow: 0 8px 20px rgba(255,123,0,0.4);
 }
