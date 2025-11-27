@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f4ef;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    padding: 15px 40px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.navbar input {
+    padding: 7px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fdecdc;
+}
+.hero-books img {
+    width: 140px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 40px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.book-row {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+.book-card img {
+    width: 120px;
+    height: 160px;
+    border-radius: 10px;
+}
+.book-card p {
+    text-align: center;
+}
+
+/* QUOTE */
+.quote {
+    padding: 40px;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* FLASH SALE */
+.flash-sale {
+    padding: 40px;
+    background: #fff6e6;
+}
+.timer {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.flash-items {
+    display: flex;
+    gap: 20px;
+}
+.flash-card img {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* AUTHORS */
+.authors {
+    display: flex;
+    gap: 20px;
+}
+.author {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* FOOTER */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+.footer input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+.footer button {
+    padding: 10px 15px;
+    margin-left: 5px;
+    border: none;
+    background: #f4c266;
+    font-weight: bold;
+    cursor: pointer;
+}
