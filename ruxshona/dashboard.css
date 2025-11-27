@@ -1,204 +1,290 @@
-/* =================== BODY =================== */
+/* =================== GLOBAL =================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background: #f0f3f7;
-margin: 0;
-padding: 0;
-color: #333;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #eef2f7;
+    color: #1f1f1f;
+    line-height: 1.6;
 }
 
 /* =================== NAVBAR =================== */
 .navbar {
-padding: 15px 50px;
-background: #fff;
-display: flex;
-justify-content: space-between;
-align-items: center;
-box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-position: sticky;
-top: 0;
-z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    background: #111;
+    color: white;
 }
-.navbar .logo {
-font-size: 26px;
-font-weight: bold;
-color: #ff7b00;
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
 }
-.navbar nav {
-display: flex;
-align-items: center;
-gap: 20px;
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
 }
-.navbar input {
-padding: 8px 12px;
-border-radius: 8px;
-border: 1px solid #ccc;
-transition: all 0.3s;
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
 }
-.navbar input:focus {
-border-color: #ff7b00;
-box-shadow: 0 0 12px rgba(255,123,0,0.4);
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #ff6b2d;
 }
 
 /* =================== HERO =================== */
 .hero {
-text-align: center;
-padding: 60px 20px;
-background: linear-gradient(135deg, #6a85b6, #bac8e0);
-color: white;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1200') center/cover no-repeat;
+    padding: 150px 20px;
+    color: white;
+    overflow: hidden;
 }
-.hero h1 {
-font-size: 42px;
-margin-bottom: 20px;
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hero button {
+    padding: 12px 28px;
+    background: white;
+    color: #334;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.hero button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 20px rgba(255,255,255,0.3);
+}
+
+.hero-books {
+    margin-top: 30px;
+}
+
 .hero-books img {
-width: 140px;
-height: 200px;
-margin: 12px;
-border-radius: 15px;
-transition: transform 0.3s, box-shadow 0.3s;
+    width: 350px;
+    height: 210px;
+    margin: 12px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    transition: all .35s;
 }
+
 .hero-books img:hover {
-transform: scale(1.1);
-box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    transform: translateY(-10px) scale(1.07);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.35);
 }
 
 /* =================== SECTIONS =================== */
 .section {
-padding: 50px 40px;
-background: #fff;
-margin-bottom: 30px;
-border-radius: 15px;
-box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    padding: 50px 40px;
+    background: white;
+    margin: 40px auto;
+    width: 90%;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
 }
+
 .section-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
 }
 
+.section-header h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.section-header a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.section-header a:hover {
+    opacity: .7;
+}
+
+/* BOOK CARDS */
 .book-row {
-display: flex;
-gap: 30px;
-flex-wrap: wrap;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
 }
+
 .book-card {
-text-align: center;
-transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    transition: all .3s;
 }
+
 .book-card img {
-width: 130px;
-height: 180px;
-border-radius: 12px;
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    transition: all .3s;
 }
+
 .book-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
 }
+
+.book-card:hover img {
+    box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+}
+
 .book-card p {
-margin-top: 10px;
-font-weight: 500;
-}
-
-/* =================== FLASH SALE =================== */
-.flash-sale {
-padding: 50px 40px;
-background: #fff6e6;
-border-radius: 15px;
-text-align: center;
-}
-.timer {
-font-size: 28px;
-font-weight: bold;
-margin-bottom: 25px;
-color: #ff7b00;
-}
-.flash-items {
-display: flex;
-gap: 25px;
-justify-content: center;
-flex-wrap: wrap;
-}
-.flash-card {
-transition: transform 0.3s, box-shadow 0.3s;
-}
-.flash-card img {
-width: 150px;
-height: 200px;
-border-radius: 12px;
-}
-.flash-card:hover {
-transform: translateY(-8px) scale(1.05);
-box-shadow: 0 14px 28px rgba(0,0,0,0.25);
-}
-
-/* =================== BUTTONS =================== */
-button {
-padding: 10px 20px;
-border: none;
-border-radius: 10px;
-background: linear-gradient(90deg, #ff7b00, #ffb347);
-color: white;
-font-weight: bold;
-cursor: pointer;
-transition: all 0.3s;
-}
-button:hover {
-transform: scale(1.1);
-box-shadow: 0 8px 20px rgba(255,123,0,0.4);
-}
-
-/* =================== AUTHORS =================== */
-.authors {
-display: flex;
-gap: 20px;
-justify-content: center;
-flex-wrap: wrap;
-}
-.author {
-width: 80px;
-height: 80px;
-border-radius: 50%;
-transition: transform 0.3s, box-shadow 0.3s;
-}
-.author:hover {
-transform: scale(1.1);
-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    margin-top: 10px;
+    font-weight: 600;
 }
 
 /* =================== QUOTE =================== */
 .quote {
-padding: 50px;
-background: #222;
-color: white;
-text-align: center;
-font-size: 22px;
-border-radius: 15px;
+    width: 90%;
+    margin: 30px auto;
+    padding: 50px;
+    background: linear-gradient(135deg, #2a2a2a, #000);
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 22px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* =================== FLASH SALE =================== */
+.flash-sale {
+    padding: 50px 40px;
+    background: #fff3da;
+    border-radius: 25px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+
+.timer {
+    font-size: 34px;
+    color: #ff8800;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.flash-items {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flash-card {
+    transition: all .3s;
+    text-align: center;
+}
+
+.flash-card img {
+    width: 160px;
+    height: 220px;
+    border-radius: 18px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    transition: .3s;
+}
+
+.flash-card:hover img {
+    transform: scale(1.07);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.flash-card span {
+    display: block;
+    margin-top: 8px;
+    font-weight: 700;
+    color: #ff7700;
+}
+
+/* =================== AUTHORS =================== */
+.authors {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.author {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    transition: .3s;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.author:hover {
+    transform: scale(1.13);
 }
 
 /* =================== FOOTER =================== */
 .footer {
-background: #222;
-color: white;
-text-align: center;
-padding: 60px 20px;
+    margin-top: 60px;
+    padding: 60px 20px;
+    background: #0e0e0e;
+    color: white;
+    text-align: center;
 }
+
 .footer input {
-padding: 12px;
-width: 280px;
-border-radius: 8px;
-border: none;
-margin-right: 10px;
+    padding: 14px;
+    width: 300px;
+    border-radius: 12px;
+    border: none;
+    margin-right: 10px;
+    outline: none;
 }
+
 .footer button {
-padding: 12px 20px;
-border-radius: 10px;
-background: linear-gradient(90deg, #ff7b00, #ffb347);
-color: white;
-font-weight: bold;
+    padding: 14px 25px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #ff8c00, #ffb85c);
+    color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
 }
+
 .footer button:hover {
-transform: scale(1.1);
-box-shadow: 0 8px 20px rgba(255,123,0,0.4);
+    opacity: .8;
+    transform: scale(1.05);
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    opacity: .7;
+    font-size: 14px;
 }

@@ -53,16 +53,35 @@ a, button, img, .service-box, .book-card {
 
 /* HERO SECTION */
 .hero {
+    position: relative;
     background: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1200') center/cover no-repeat;
     padding: 150px 20px;
     color: white;
+    overflow: hidden;
 }
 
-.hero h1 {
+/* Blur qatlami */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px); /* asosiy blur */
+    background: rgba(0,0,0,0.25); /* biroz qoramtir shaffoflik */
+    z-index: 1;
+}
+
+/* Matn va boshqa elementlar ustida turişi uchun */
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1, .hero h2 {
     font-size: 36px;
     font-weight: bold;
     color: #ff6b2d;
 }
+
 
 .search-box {
     margin-top: 25px;
